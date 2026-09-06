@@ -11,10 +11,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="canonical" href="https://homebalance.gr/">
-<meta name="referrer" content="strict-origin-when-cross-origin">
-<meta name="robots" content="index, follow">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://assets.mailerlite.com; form-action 'self' https://assets.mailerlite.com; upgrade-insecure-requests">
 <style>
   :root{
     --green:#2F4A3C;
@@ -180,67 +176,6 @@
     .hero{padding:40px 0 64px;}
     section.block{padding:60px 0;}
   }
-  /* CONSENT / FORM EXTRAS */
-  .field-consent{display:flex;align-items:flex-start;gap:10px;margin:4px 0 14px;}
-  .field-consent input{flex-shrink:0;width:17px;height:17px;margin-top:2px;accent-color:var(--green);cursor:pointer;}
-  .field-consent label{font-size:12.5px;line-height:1.5;color:var(--muted);cursor:pointer;}
-  .field-consent a{color:var(--green);text-decoration:underline;text-underline-offset:2px;}
-  .hp-field{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
-  .form-error{display:none;font-size:12.5px;line-height:1.5;color:#9b2c2c;background:rgba(155,44,44,0.07);border:1px solid rgba(155,44,44,0.2);border-radius:9px;padding:10px 12px;margin-top:12px;}
-  .form-error.show{display:block;}
-  .btn[disabled]{opacity:.6;cursor:not-allowed;transform:none;}
-
-  /* LEGAL OVERLAY */
-  .legal{display:none;position:fixed;inset:0;z-index:200;padding:32px 20px;}
-  .legal:target{display:flex;align-items:center;justify-content:center;}
-  .legal-backdrop{position:fixed;inset:0;background:rgba(34,56,45,0.62);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);}
-  .legal-panel{position:relative;width:100%;max-width:820px;max-height:calc(100vh - 64px);display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line);border-radius:20px;box-shadow:0 40px 90px -40px rgba(34,56,45,0.55);overflow:hidden;}
-  .legal-head{flex-shrink:0;display:flex;align-items:flex-start;justify-content:space-between;gap:20px;padding:28px 38px 20px;border-bottom:1px solid var(--line);background:var(--paper);}
-  .legal-eyebrow{display:block;font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
-  .legal-head h2{font-family:'Fraunces',serif;font-size:clamp(24px,3.4vw,32px);font-weight:500;color:var(--green);line-height:1.1;}
-  .legal-close{flex-shrink:0;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--green);text-decoration:none;font-size:14px;transition:all .2s ease;}
-  .legal-close:hover{background:var(--green);color:var(--cream);border-color:var(--green);}
-  .legal-body{padding:26px 38px 38px;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;}
-  .legal-meta{font-size:12px;color:var(--muted);letter-spacing:0.01em;margin-bottom:20px;}
-  .legal-lead{font-size:15.5px;line-height:1.7;color:var(--ink);background:var(--cream-warm);border-left:3px solid var(--gold);border-radius:0 12px 12px 0;padding:18px 20px;margin-bottom:30px;}
-  .legal-body h3{font-family:'Fraunces',serif;font-size:19px;font-weight:500;color:var(--green);margin:30px 0 10px;letter-spacing:-0.01em;}
-  .legal-body h3:first-of-type{margin-top:0;}
-  .legal-body p{font-size:14.5px;line-height:1.72;color:var(--muted);margin-bottom:12px;}
-  .legal-body p strong{color:var(--ink);font-weight:600;}
-  .legal-body ul{margin:0 0 14px;padding-left:20px;}
-  .legal-body li{font-size:14.5px;line-height:1.72;color:var(--muted);margin-bottom:7px;}
-  .legal-body li strong{color:var(--ink);font-weight:600;}
-  .legal-body a{color:var(--green);text-decoration:underline;text-underline-offset:2px;}
-  .legal-body a:hover{color:var(--gold);}
-  .legal-box{background:var(--cream-warm);border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-size:14px;line-height:1.7;}
-  .legal-hr{border:none;border-top:1px solid var(--line);margin:34px 0 26px;}
-  .legal-fine{font-size:13px;color:var(--muted);opacity:.9;}
-  .legal-actions{margin-top:28px;padding-top:22px;border-top:1px solid var(--line);}
-  .legal-body a.legal-back{display:inline-block;background:var(--green);color:var(--cream);text-decoration:none;font-size:14px;font-weight:600;padding:12px 26px;border-radius:100px;transition:background .25s ease;}
-  .legal-body a.legal-back:hover{background:var(--green-deep);color:var(--cream);}
-  .legal-body a.legal-close{text-decoration:none;}
-
-  /* legal table */
-  .legal-table{border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:14px 0 16px;}
-  .lt-row{display:grid;grid-template-columns:1.1fr 0.8fr 1.1fr;gap:14px;padding:12px 16px;border-bottom:1px solid var(--line);font-size:13.5px;line-height:1.6;color:var(--muted);}
-  .lt-row:last-child{border-bottom:none;}
-  .lt-head{background:var(--cream-warm);font-weight:600;color:var(--green);font-size:12px;letter-spacing:0.06em;text-transform:uppercase;}
-
-  .foot-legal{display:flex;gap:18px;align-items:center;flex-wrap:wrap;}
-  .foot-legal a{color:rgba(244,241,233,0.7);text-decoration:none;font-size:13px;transition:color .2s;}
-  .foot-legal a:hover{color:var(--gold-bright);text-decoration:underline;}
-
-  @media(max-width:760px){
-    .legal{padding:0;}
-    .legal-panel{border-radius:0;max-height:100vh;height:100vh;border:none;}
-    .legal-head{padding:24px 20px 18px;}
-    .legal-body{padding:22px 20px 40px;}
-    .lt-row{grid-template-columns:1fr;gap:4px;}
-    .lt-head{display:none;}
-    .lt-row span:nth-child(1){color:var(--ink);font-weight:600;}
-    .lt-row span:nth-child(2)::before{content:"Δεδομένα: ";font-weight:600;}
-    .lt-row span:nth-child(3)::before{content:"Νομική βάση: ";font-weight:600;}
-  }
 </style>
 </head>
 <body>
@@ -271,23 +206,17 @@
     </div>
 
     <div class="signup reveal in" id="signup">
-      <form id="leadForm" novalidate>
+      <form id="leadForm">
         <label class="signup-label">Στείλε μου το όνομα & το email σου - θα σου το στείλω αμέσως.</label>
-        <div class="field"><input type="text" id="name" name="name" autocomplete="given-name" placeholder="Το όνομά σου" required></div>
-        <div class="field"><input type="email" id="email" name="email" autocomplete="email" placeholder="Το email σου" required></div>
-        <div class="hp-field" aria-hidden="true"><label for="hb-site">Άφησε το πεδίο κενό</label><input type="text" id="hb-site" name="hb-site" tabindex="-1" autocomplete="off"></div>
-        <div class="field-consent">
-          <input type="checkbox" id="consent">
-          <label for="consent">Συμφωνώ να λαμβάνω το template και τα ενημερωτικά email του Home Balance. Έχω διαβάσει την <a href="#privacy">Πολιτική Απορρήτου</a> και μπορώ να διαγραφώ όποτε θέλω.</label>
-        </div>
-        <button type="submit" class="btn" id="leadBtn">Στείλε μου το Home Balance δωρεάν</button>
-        <p class="form-error" id="formError" role="alert"></p>
-        <p class="form-note">Θα λάβεις πρώτα ένα email επιβεβαίωσης - μόλις πατήσεις τον σύνδεσμο, σου στέλνω το template και τον οδηγό μεθόδου. Χωρίς spam, διαγραφή με ένα κλικ.</p>
+        <div class="field"><input type="text" id="name" placeholder="Το όνομά σου" required></div>
+        <div class="field"><input type="email" id="email" placeholder="Το email σου" required></div>
+        <button type="submit" class="btn">Στείλε μου το Home Balance δωρεάν</button>
+        <p class="form-note">Θα λάβεις το template + τον οδηγό μεθόδου. Χωρίς spam - μπορείς να διαγραφείς όποτε θες.</p>
       </form>
       <div class="form-success" id="success">
         <div class="check">✓</div>
-        <h3>Ένα βήμα ακόμα!</h3>
-        <p>Σου έστειλα ένα email επιβεβαίωσης. Πάτα τον σύνδεσμο μέσα σε αυτό και αμέσως μετά λαμβάνεις το template και τα πρώτα βήματα. Αν δεν το βρίσκεις στο inbox, τσέκαρε στα ανεπιθύμητα.</p>
+        <h3>Είσαι μέσα!</h3>
+        <p>Έλεγξε το email σου σε λίγο - σου στέλνω το template και τα πρώτα βήματα. Αν δεν είναι στο inbox, τσέκαρε στα ανεπιθύμητα.</p>
         <div class="success-follow">
           <p>Όσο το περιμένεις, ακολούθησέ με για συμβουλές κάθε εβδομάδα:</p>
           <div class="sf-links">
@@ -437,116 +366,6 @@
 </section>
 
 <!-- FOOTER -->
-<!-- PRIVACY / LEGAL -->
-<section id="privacy" class="legal" aria-labelledby="privacy-title">
-  <a class="legal-backdrop" href="#" aria-label="Κλείσιμο"></a>
-  <div class="legal-panel" role="document">
-    <div class="legal-head">
-      <div>
-        <span class="legal-eyebrow">Νομικά</span>
-        <h2 id="privacy-title">Πολιτική Απορρήτου</h2>
-      </div>
-      <a class="legal-close" href="#" aria-label="Κλείσιμο">&#10005;</a>
-    </div>
-
-    <div class="legal-body">
-      <p class="legal-meta">Τελευταία ενημέρωση: 5 Σεπτεμβρίου 2026 &nbsp;·&nbsp; Ισχύει για τον ιστότοπο homebalance.gr</p>
-
-      <p class="legal-lead">Με λίγα λόγια: το μόνο που ζητάω είναι το όνομα και το email σου, για να σου στείλω το template και τα εβδομαδιαία emails. Δεν χρησιμοποιώ cookies παρακολούθησης, δεν κάνω profiling και δεν πουλάω ούτε ενοικιάζω τα δεδομένα σου σε κανέναν. Μπορείς να διαγραφείς με ένα κλικ, οποτεδήποτε.</p>
-
-      <h3>1. Ποιος είναι υπεύθυνος για τα δεδομένα σου</h3>
-      <p>Υπεύθυνος επεξεργασίας κατά την έννοια του Γενικού Κανονισμού για την Προστασία Δεδομένων (ΕΕ) 2016/679 («ΓΚΠΔ»/GDPR) είναι ο <strong>Μάριος Μπελεχρής</strong>, φυσικό πρόσωπο, με έδρα την Αθήνα, Ελλάδα.</p>
-      <p>Επικοινωνία για κάθε θέμα προσωπικών δεδομένων: <a href="mailto:info@homebalance.gr">info@homebalance.gr</a></p>
-      <p>Δεν υφίσταται υποχρέωση ορισμού Υπευθύνου Προστασίας Δεδομένων (DPO) κατά το άρθρο 37 ΓΚΠΔ· τα αιτήματά σου απαντώνται απευθείας στην παραπάνω διεύθυνση.</p>
-
-      <h3>2. Ποια δεδομένα συλλέγονται</h3>
-      <p><strong>α) Δεδομένα που δίνεις εσύ.</strong> Όταν συμπληρώνεις τη φόρμα εγγραφής: το <strong>όνομά σου</strong> (ή το όνομα που επιλέγεις να δηλώσεις) και η <strong>διεύθυνση email</strong> σου. Καταγράφεται επίσης η ημερομηνία και ώρα της συγκατάθεσής σου, καθώς και η επιβεβαίωσή της μέσω double opt-in — αυτό απαιτείται από το άρθρο 7 παρ. 1 ΓΚΠΔ ως απόδειξη της συγκατάθεσης.</p>
-      <p><strong>β) Δεδομένα που παράγονται αυτόματα.</strong> Ο πάροχος φιλοξενίας του ιστότοπου καταγράφει, όπως κάθε διακομιστής, τεχνικά στοιχεία της επίσκεψης: διεύθυνση IP, τύπο προγράμματος περιήγησης και λειτουργικού συστήματος, ημερομηνία και ώρα του αιτήματος και τη σελίδα προέλευσης. Τα στοιχεία αυτά δεν συνδέονται από εμένα με το πρόσωπό σου και δεν χρησιμοποιούνται για τη δημιουργία προφίλ.</p>
-      <p><strong>γ) Δεδομένα χρήσης των email.</strong> Η πλατφόρμα αποστολής καταγράφει αν ένα email παραδόθηκε, ανοίχθηκε ή αν έγινε κλικ σε σύνδεσμο, καθώς και τυχόν απεγγραφή ή αναφορά ως ανεπιθύμητο. Αυτό χρησιμεύει αποκλειστικά για να ξέρω αν το περιεχόμενο είναι χρήσιμο και αν η αποστολή λειτουργεί τεχνικά.</p>
-      <p><strong>Δεν συλλέγονται</strong> οικονομικά σου στοιχεία. Το αρχείο Home Balance που κατεβάζεις λειτουργεί <strong>τοπικά στον υπολογιστή σου ή στον δικό σου λογαριασμό Google</strong>. Τα ποσά, οι κατηγορίες εξόδων, οι στόχοι και οι επενδύσεις που καταχωρείς <strong>δεν αποστέλλονται ποτέ σε εμένα και δεν έχω καμία πρόσβαση σε αυτά</strong>.</p>
-
-      <h3>3. Γιατί επεξεργάζομαι τα δεδομένα και με ποια νομική βάση</h3>
-      <div class="legal-table" role="table">
-        <div class="lt-row lt-head" role="row"><span>Σκοπός</span><span>Δεδομένα</span><span>Νομική βάση</span></div>
-        <div class="lt-row" role="row"><span>Αποστολή του template και του οδηγού μεθόδου που ζήτησες</span><span>Όνομα, email</span><span>Συγκατάθεση — άρθρο 6 παρ. 1 στοιχ. α΄ ΓΚΠΔ</span></div>
-        <div class="lt-row" role="row"><span>Αποστολή περιοδικών ενημερωτικών email (newsletter) με συμβουλές</span><span>Όνομα, email</span><span>Συγκατάθεση — άρθρο 6 παρ. 1 στοιχ. α΄ ΓΚΠΔ και άρθρο 11 ν. 3471/2006</span></div>
-        <div class="lt-row" role="row"><span>Απόδειξη ότι δόθηκε έγκυρη συγκατάθεση</span><span>Χρόνος και τρόπος συγκατάθεσης</span><span>Έννομη υποχρέωση — άρθρο 6 παρ. 1 στοιχ. γ΄ σε συνδυασμό με άρθρο 7 παρ. 1 ΓΚΠΔ</span></div>
-        <div class="lt-row" role="row"><span>Ασφαλής και εύρυθμη λειτουργία του ιστότοπου, αποτροπή κατάχρησης</span><span>Τεχνικά αρχεία καταγραφής</span><span>Έννομο συμφέρον — άρθρο 6 παρ. 1 στοιχ. στ΄ ΓΚΠΔ</span></div>
-        <div class="lt-row" role="row"><span>Στατιστικά παράδοσης και αναγνωσιμότητας των email</span><span>Ανοίγματα, κλικ, απεγγραφές</span><span>Συγκατάθεση — άρθρο 6 παρ. 1 στοιχ. α΄ ΓΚΠΔ</span></div>
-      </div>
-      <p>Η παροχή των δεδομένων είναι απολύτως προαιρετική. Αν δεν τα δώσεις, απλώς δεν μπορώ να σου στείλω το template — καμία άλλη συνέπεια δεν υπάρχει.</p>
-
-      <h3>4. Ποιοι άλλοι εμπλέκονται</h3>
-      <p>Δεν πουλάω, δεν ενοικιάζω και δεν ανταλλάσσω τα δεδομένα σου. Τα μοιράζομαι μόνο με τους παρακάτω παρόχους, οι οποίοι ενεργούν ως <strong>εκτελούντες την επεξεργασία</strong> για λογαριασμό μου, δεσμευμένοι με σύμβαση κατά το άρθρο 28 ΓΚΠΔ:</p>
-      <ul>
-        <li><strong>MailerLite</strong> — πλατφόρμα αποστολής email με έδρα στην Ευρωπαϊκή Ένωση. Αποθηκεύει τη λίστα εγγεγραμμένων και εκτελεί τις αποστολές.</li>
-        <li><strong>GitHub, Inc.</strong> (όμιλος Microsoft, ΗΠΑ) — φιλοξενία του ιστότοπου μέσω της υπηρεσίας GitHub Pages. Επεξεργάζεται τεχνικά αρχεία καταγραφής, όπως περιγράφεται ανωτέρω.</li>
-        <li><strong>Google Ireland Limited / Google LLC</strong> — παροχή των γραμματοσειρών εμφάνισης (Google Fonts). Κατά τη φόρτωση της σελίδας, το πρόγραμμα περιήγησής σου συνδέεται στους διακομιστές της Google, η οποία λαμβάνει τη διεύθυνση IP σου. Δεν εγκαθίστανται cookies από την υπηρεσία αυτή.</li>
-      </ul>
-      <p>Δεδομένα ενδέχεται επίσης να γνωστοποιηθούν σε δημόσιες αρχές, εφόσον αυτό επιβάλλεται από τον νόμο ή από δικαστική απόφαση.</p>
-
-      <h3>5. Διαβίβαση εκτός Ευρωπαϊκού Οικονομικού Χώρου</h3>
-      <p>Η αποθήκευση της λίστας εγγεγραμμένων γίνεται εντός ΕΕ. Ορισμένοι από τους ανωτέρω παρόχους (GitHub, Google) εδρεύουν ή διατηρούν υποδομές στις Ηνωμένες Πολιτείες. Οι σχετικές διαβιβάσεις στηρίζονται στις <strong>Τυποποιημένες Συμβατικές Ρήτρες</strong> της Ευρωπαϊκής Επιτροπής (άρθρο 46 παρ. 2 στοιχ. γ΄ ΓΚΠΔ) και, όπου εφαρμόζεται, στην <strong>απόφαση επάρκειας για το Πλαίσιο Προστασίας Δεδομένων ΕΕ–ΗΠΑ</strong> (EU–U.S. Data Privacy Framework) της 10ης Ιουλίου 2023.</p>
-
-      <h3>6. Για πόσο διατηρούνται</h3>
-      <ul>
-        <li><strong>Όνομα και email:</strong> έως ότου ανακαλέσεις τη συγκατάθεσή σου ή ζητήσεις διαγραφή. Αν δεν ανοίξεις κανένα email για 24 συνεχόμενους μήνες, η εγγραφή σου διαγράφεται με δική μου πρωτοβουλία.</li>
-        <li><strong>Απόδειξη συγκατάθεσης και απεγγραφής:</strong> έως πέντε (5) έτη από τη λήξη της σχέσης, για την υπεράσπιση έναντι τυχόν αξιώσεων.</li>
-        <li><strong>Διεύθυνση email σε λίστα αποκλεισμού:</strong> μετά την απεγγραφή διατηρείται μόνο η διεύθυνσή σου σε λίστα καταστολής, ώστε να μη λάβεις ξανά email κατά λάθος. Μπορείς να ζητήσεις και τη διαγραφή αυτής.</li>
-        <li><strong>Τεχνικά αρχεία καταγραφής:</strong> διατηρούνται από τον πάροχο φιλοξενίας για περιορισμένο διάστημα, σύμφωνα με τη δική του πολιτική.</li>
-      </ul>
-
-      <h3>7. Cookies και τεχνολογίες παρακολούθησης</h3>
-      <p>Ο ιστότοπος <strong>δεν εγκαθιστά cookies</strong> στη συσκευή σου: ούτε αναλυτικά, ούτε διαφημιστικά, ούτε cookies τρίτων. Δεν χρησιμοποιείται Google Analytics, Meta Pixel ή αντίστοιχο εργαλείο παρακολούθησης. Για τον λόγο αυτόν δεν εμφανίζεται banner συγκατάθεσης — δεν υπάρχει τίποτα για το οποίο να χρειάζεται να συγκατατεθείς.</p>
-      <p>Στα ενημερωτικά email ενδέχεται να περιλαμβάνεται εικονοστοιχείο μέτρησης ανοιγμάτων. Αν δεν το επιθυμείς, μπορείς να ρυθμίσεις το πρόγραμμα ηλεκτρονικού ταχυδρομείου σου ώστε να μην κατεβάζει αυτόματα εικόνες.</p>
-
-      <h3>8. Τα δικαιώματά σου</h3>
-      <p>Σύμφωνα με τα άρθρα 15 έως 22 ΓΚΠΔ και τον ν. 4624/2019, έχεις δικαίωμα:</p>
-      <ul>
-        <li><strong>πρόσβασης</strong> — να μάθεις ποια δεδομένα σου τηρώ και να λάβεις αντίγραφο (άρθρο 15)·</li>
-        <li><strong>διόρθωσης</strong> — να διορθώσεις ανακριβή ή να συμπληρώσεις ελλιπή στοιχεία (άρθρο 16)·</li>
-        <li><strong>διαγραφής</strong> — «δικαίωμα στη λήθη» (άρθρο 17)·</li>
-        <li><strong>περιορισμού</strong> της επεξεργασίας (άρθρο 18)·</li>
-        <li><strong>φορητότητας</strong> — να λάβεις τα δεδομένα σου σε δομημένο, κοινώς χρησιμοποιούμενο και αναγνώσιμο από μηχανήματα μορφότυπο (άρθρο 20)·</li>
-        <li><strong>εναντίωσης</strong> στην επεξεργασία που βασίζεται σε έννομο συμφέρον (άρθρο 21)·</li>
-        <li><strong>ανάκλησης της συγκατάθεσης</strong> ανά πάσα στιγμή, χωρίς να θίγεται η νομιμότητα της επεξεργασίας που έγινε πριν από την ανάκληση (άρθρο 7 παρ. 3).</li>
-      </ul>
-      <p>Ο ευκολότερος τρόπος να ανακαλέσεις τη συγκατάθεσή σου είναι ο σύνδεσμος <em>«Διαγραφή από τη λίστα»</em> στο τέλος κάθε email. Για οποιοδήποτε άλλο αίτημα, γράψε μου στο <a href="mailto:info@homebalance.gr">info@homebalance.gr</a>. Απαντώ <strong>εντός ενός (1) μηνός</strong> από την παραλαβή, όπως ορίζει το άρθρο 12 παρ. 3 ΓΚΠΔ. Η άσκηση των δικαιωμάτων σου είναι δωρεάν.</p>
-
-      <h3>9. Δικαίωμα καταγγελίας</h3>
-      <p>Αν θεωρείς ότι η επεξεργασία των δεδομένων σου παραβιάζει τη νομοθεσία, έχεις δικαίωμα να υποβάλεις καταγγελία στην εποπτική αρχή:</p>
-      <p class="legal-box"><strong>Αρχή Προστασίας Δεδομένων Προσωπικού Χαρακτήρα</strong><br>
-      Λεωφόρος Κηφισίας 1–3, Τ.Κ. 115 23, Αθήνα<br>
-      Τηλέφωνο: +30 210 6475600<br>
-      Ηλ. ταχυδρομείο: <a href="mailto:contact@dpa.gr">contact@dpa.gr</a> &nbsp;·&nbsp; <a href="https://www.dpa.gr" target="_blank" rel="noopener noreferrer">www.dpa.gr</a></p>
-
-      <h3>10. Ασφάλεια</h3>
-      <p>Ο ιστότοπος εξυπηρετείται αποκλειστικά μέσω κρυπτογραφημένης σύνδεσης (HTTPS/TLS). Η πρόσβαση στη λίστα εγγεγραμμένων προστατεύεται με ισχυρό κωδικό και έλεγχο ταυτότητας δύο παραγόντων. Εφαρμόζονται τα κατάλληλα τεχνικά και οργανωτικά μέτρα κατά το άρθρο 32 ΓΚΠΔ, με βάση την αρχή της ελαχιστοποίησης: συλλέγονται μόνο τα δεδομένα που είναι απολύτως απαραίτητα. Σε περίπτωση παραβίασης που ενέχει υψηλό κίνδυνο για τα δικαιώματά σου, θα ενημερωθείς κατά τα άρθρα 33 και 34 ΓΚΠΔ.</p>
-
-      <h3>11. Ανήλικοι</h3>
-      <p>Ο ιστότοπος απευθύνεται σε ενήλικες. Σύμφωνα με το άρθρο 21 του ν. 4624/2019, η συγκατάθεση για υπηρεσίες της κοινωνίας των πληροφοριών παρέχεται εγκύρως από πρόσωπα που έχουν συμπληρώσει το <strong>15ο έτος</strong> της ηλικίας τους. Δεν συλλέγω εν γνώσει μου δεδομένα από μικρότερους. Αν διαπιστωθεί τέτοια εγγραφή, διαγράφεται αμέσως.</p>
-
-      <h3>12. Αυτοματοποιημένη λήψη αποφάσεων</h3>
-      <p>Δεν λαμβάνονται αποφάσεις που σε αφορούν αποκλειστικά βάσει αυτοματοποιημένης επεξεργασίας, ούτε καταρτίζονται προφίλ κατά την έννοια του άρθρου 22 ΓΚΠΔ.</p>
-
-      <h3>13. Σύνδεσμοι προς τρίτους</h3>
-      <p>Ο ιστότοπος παραπέμπει σε προφίλ σε πλατφόρμες τρίτων (Instagram, TikTok). Οι πλατφόρμες αυτές έχουν δικές τους πολιτικές απορρήτου, για τις οποίες δεν φέρω ευθύνη. Οι σύνδεσμοι ανοίγουν σε νέα καρτέλα και δεν μεταφέρουν δεδομένα σου.</p>
-
-      <h3>14. Αλλαγές στην παρούσα πολιτική</h3>
-      <p>Η πολιτική μπορεί να επικαιροποιείται όταν αλλάζουν οι υπηρεσίες ή το νομικό πλαίσιο. Η εκάστοτε ισχύουσα έκδοση αναρτάται σε αυτή τη σελίδα με την ημερομηνία τελευταίας ενημέρωσης. Αν οι αλλαγές είναι ουσιώδεις, θα ενημερωθείς με email πριν τεθούν σε ισχύ.</p>
-
-      <hr class="legal-hr">
-
-      <h3>Σημείωση για το περιεχόμενο</h3>
-      <p class="legal-fine">Δεν είμαι αδειοδοτημένος οικονομικός σύμβουλος. Το Home Balance είναι εκπαιδευτικό υλικό που μοιράζεται μια προσωπική μέθοδο οργάνωσης των οικονομικών του νοικοκυριού και δεν αποτελεί εξατομικευμένη επενδυτική, φορολογική ή νομική συμβουλή. Κάθε οικονομική απόφαση παραμένει δική σου ευθύνη.</p>
-
-      <p class="legal-fine">Το παρόν κείμενο συντάχθηκε για ενημερωτικούς σκοπούς και δεν υποκαθιστά εξατομικευμένη νομική συμβουλή.</p>
-
-      <div class="legal-actions"><a class="legal-back" href="#">Επιστροφή στη σελίδα</a></div>
-    </div>
-  </div>
-</section>
-
 <footer>
   <div class="wrap">
     <div class="foot-inner">
@@ -555,10 +374,6 @@
         <span style="color:rgba(244,241,233,0.85);font-family:'Fraunces',serif;">Home Balance</span>
       </div>
       <span>© <span id="yr"></span> Μάριος Μπελεχρής</span>
-      <div class="foot-legal">
-        <a href="#privacy">Πολιτική Απορρήτου</a>
-        <a href="mailto:info@homebalance.gr">info@homebalance.gr</a>
-      </div>
       <div class="foot-social">
         <a href="https://www.instagram.com/marios_bele?igsh=NTZxc3ZnaDU2Mnh3" target="_blank" rel="noopener" aria-label="Instagram">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
@@ -583,64 +398,15 @@
   },{threshold:0.12});
   document.querySelectorAll('.reveal:not(.in)').forEach(el=>io.observe(el));
 
-  // form -> MailerLite embedded-form endpoint (public by design, no API key in the browser)
-  (function(){
-    var ENDPOINT = 'https://assets.mailerlite.com/jsonp/2394698/forms/189646984911521109/subscribe';
-    var form = document.getElementById('leadForm');
-    var btn  = document.getElementById('leadBtn');
-    var err  = document.getElementById('formError');
-    var LABEL = btn.textContent;
-
-    function fail(msg){
-      err.textContent = msg; err.classList.add('show');
-      btn.disabled = false; btn.textContent = LABEL;
-    }
-    function done(){
-      form.style.display = 'none';
-      document.getElementById('success').classList.add('show');
-    }
-
-    form.addEventListener('submit', function(ev){
-      ev.preventDefault();
-      err.classList.remove('show');
-
-      if(document.getElementById('hb-site').value !== '') return;   // honeypot
-
-      var name  = document.getElementById('name').value.trim();
-      var email = document.getElementById('email').value.trim();
-
-      if(!name){ return fail('Συμπλήρωσε το όνομά σου.'); }
-      if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)){ return fail('Έλεγξε τη διεύθυνση email - κάτι δεν φαίνεται σωστό.'); }
-      if(!document.getElementById('consent').checked){ return fail('Χρειάζεται να συμφωνήσεις με την Πολιτική Απορρήτου για να σου στείλω το template.'); }
-
-      btn.disabled = true; btn.textContent = 'Στέλνω...';
-
-      var body = new URLSearchParams();
-      body.append('fields[email]', email);
-      body.append('fields[name]', name);
-      body.append('ml-submit', '1');
-      body.append('anticsrf', 'true');
-
-      fetch(ENDPOINT, { method:'POST', body: body })
-        .then(function(r){ return r.json().catch(function(){ return { success: r.ok }; }); })
-        .then(function(d){
-          if(d && (d.success === true || d.ok === true)){ done(); }
-          else { fail('Δεν κατάφερα να ολοκληρώσω την εγγραφή. Δοκίμασε ξανά ή γράψε μου στο info@homebalance.gr'); }
-        })
-        .catch(function(){
-          // opaque fallback (π.χ. αποκλεισμός CORS): η εγγραφή στέλνεται, απλώς δεν διαβάζουμε απάντηση
-          fetch(ENDPOINT, { method:'POST', mode:'no-cors', body: body })
-            .then(done)
-            .catch(function(){ fail('Δεν υπάρχει σύνδεση αυτή τη στιγμή. Δοκίμασε ξανά σε λίγο.'); });
-        });
-    });
-  })();
-
-  // κλείσιμο του νομικού overlay με Escape
-  document.addEventListener('keydown', function(e){
-    if(e.key === 'Escape' && location.hash === '#privacy'){
-      history.replaceState(null, '', location.pathname);
-    }
+  // form - replace endpoint with your email-tool form action (MailerLite/Beehiiv/etc.)
+  document.getElementById('leadForm').addEventListener('submit', function(ev){
+    ev.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email); if(!name || !emailOk) return;
+    fetch('https://connect.mailerlite.com/api/subscribers',{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiNjJiMzI1MjFlNTVhOTk3YTM5Yjk5YmVlZmNjYTAyMGY5NzE5ZjhiNTQ5NTk0NWM5Y2JhYTIwZWQ1MzVmZDg3M2UwZWNiOWExNTIzOWE5MjYiLCJpYXQiOjE3ODE5ODI4NzQuNTE4MTE2LCJuYmYiOjE3ODE5ODI4NzQuNTE4MTE5LCJleHAiOjQ5Mzc2NTY0NzQuNTE0MTU2LCJzdWIiOiIyNDEzMTg0Iiwic2NvcGVzIjpbXX0.dwqaQghsBYfykgK7cxH4ujOq79MJE6o_9BLup_J_xkyqceQwFIGKmMHJQ0Answr0Wh2KBzhM68WwgKU0Z0G2aUj3sUhVOpg8-Kfie2pMJA8Y-kN-c-e1fc5IDLbDw432H8xCoLigjr8YBcf2W4inEPKYIy1xYypCV4jsYHyVmCKSZ9mwavEYRsivufEvslvqf-DBNT3UXTSBA8k1FqOvKnAfafBYMhEhv83vxlPB-Eoa4QwDmCCbyQp8aleetjsxFJzvFeM4nWv_PMLAQYMYj5SyZqxY_ZdJZKRE_xRFY1F_yahDLvTbgnO2zYxvHRo0xw307T4x6rx0eSX0T6NGGyyUfdPo6g0DfajJQLcsJAbp8HdLd46IomDdL6dtvu3qM2i8Dokr3jl6z2aCkpNqgZC8qwSWPM8HmYZs4BWjaugGwI9ewCMis8tmHsSA3p5M3a5eCJuxBvDwccj0STyUhWHhHnAj4cYdKxRPnWrBProp_Ph7t2a7dUjwAb1eSZkMrW6AeekrUt23efmYBYMu4MNjkhoSD1Ck0MY9SIdnx8uCjz5830JCb8wHkObnIivzGItKGMNMjdLIsUaaHmryhlD0YiKCibehVgq6pOxzG8epTT0lVNhydCKjEe_0idXBZi-R2Zwy-T1bF6r8n0nP0qPV5V9YrTjbE_ohmCSFK2A'},body:JSON.stringify({email:email,fields:{name:name},groups:['189012027866351113']})}).catch(function(){});
+    document.getElementById('leadForm').style.display='none';
+    document.getElementById('success').classList.add('show');
   });
 </script>
 </body>

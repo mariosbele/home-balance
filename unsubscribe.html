@@ -4,63 +4,66 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Κατάργηση εγγραφής – Home Balance</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; form-action 'none'; upgrade-insecure-requests">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
+  :root{
+    --green:#2F4A3C; --green-deep:#22382D; --green-soft:#4A6453;
+    --cream:#F4F1E9; --cream-warm:#EDE8DC; --paper:#FBFAF6;
+    --ink:#1E2620; --muted:#6E7670; --line:rgba(47,74,60,0.14); --gold:#B8935A;
+  }
   *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:'Inter',sans-serif;background:#f9f6ef;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
-  .card{background:#fff;border-radius:16px;padding:48px 40px;max-width:480px;width:100%;text-align:center;box-shadow:0 4px 24px rgba(0,0,0,.08)}
-  .logo{font-family:'Fraunces',serif;font-size:20px;font-weight:700;color:#1a1a1a;margin-bottom:32px}
-  h1{font-size:22px;font-weight:700;color:#1a1a1a;margin-bottom:12px}
-  p{font-size:15px;color:#555;line-height:1.6;margin-bottom:24px}
-  .btn{display:inline-block;background:#1a1a1a;color:#fff;border:none;border-radius:8px;padding:14px 28px;font-size:15px;font-weight:600;cursor:pointer;text-decoration:none;transition:opacity .2s}
-  .btn:hover{opacity:.85}
-  .success{color:#2d7a2d;font-weight:600}
-  .error{color:#b00020;font-weight:600}
-  .spinner{width:32px;height:32px;border:3px solid #e0d9cc;border-top-color:#1a1a1a;border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 20px}
-  @keyframes spin{to{transform:rotate(360deg)}}
+  body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--ink);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;line-height:1.65;}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:44px 40px;max-width:540px;width:100%;box-shadow:0 24px 60px -32px rgba(34,56,45,.4);}
+  .logo{font-family:'Fraunces',serif;font-size:20px;font-weight:500;color:var(--green);margin-bottom:28px;}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+  h1{font-family:'Fraunces',serif;font-size:27px;font-weight:500;color:var(--green);letter-spacing:-.02em;margin-bottom:14px;line-height:1.15;}
+  p{font-size:14.5px;color:var(--muted);margin-bottom:14px;}
+  p strong{color:var(--ink);font-weight:600;}
+  .steps{background:var(--cream-warm);border-left:3px solid var(--gold);border-radius:0 12px 12px 0;padding:18px 20px;margin:20px 0 24px;}
+  .steps ol{margin:0;padding-left:18px;}
+  .steps li{font-size:14.5px;color:var(--muted);margin-bottom:8px;}
+  .steps li:last-child{margin-bottom:0;}
+  .steps strong{color:var(--ink);font-weight:600;}
+  .mail{display:inline-block;background:var(--cream-warm);border:1px solid var(--line);border-radius:9px;padding:8px 12px;font-size:14px;color:var(--green);word-break:break-all;margin-bottom:20px;}
+  .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px;padding-top:22px;border-top:1px solid var(--line);}
+  .btn{display:inline-block;background:var(--green);color:var(--cream);border-radius:100px;padding:12px 26px;font-size:14px;font-weight:600;text-decoration:none;transition:background .25s ease;}
+  .btn:hover{background:var(--green-deep);}
+  .btn.ghost{background:transparent;color:var(--green);border:1px solid var(--line);}
+  .btn.ghost:hover{background:var(--green);color:var(--cream);border-color:var(--green);}
+  .fine{font-size:12.5px;color:var(--muted);opacity:.85;margin-top:20px;}
+  a{color:var(--green);}
 </style>
 </head>
 <body>
 <div class="card">
   <div class="logo">Home Balance</div>
-  <div id="loading">
-    <div class="spinner"></div>
-    <p>Επεξεργασία αιτήματος...</p>
+  <span class="eyebrow">Κατάργηση εγγραφής</span>
+  <h1>Θέλεις να σταματήσουν τα email;</h1>
+
+  <p>Κανένα πρόβλημα — και δεν χρειάζεται να δικαιολογηθείς. Η διαγραφή γίνεται <strong>αμέσως και με ένα κλικ</strong>, από το ίδιο το email που έλαβες.</p>
+
+  <div class="steps">
+    <ol>
+      <li>Άνοιξε <strong>οποιοδήποτε email</strong> του Home Balance.</li>
+      <li>Κύλησε στο τέλος και πάτησε <strong>«Διαγραφή από τη λίστα» / «Unsubscribe»</strong>.</li>
+      <li>Έτοιμο. Δεν θα λάβεις τίποτε άλλο.</li>
+    </ol>
   </div>
-  <div id="done" style="display:none"></div>
+
+  <p>Αν δεν βρίσκεις τον σύνδεσμο ή δεν έχεις πλέον πρόσβαση στο email, στείλε μου δυο λέξεις και το κάνω εγώ:</p>
+  <a class="mail" href="mailto:info@homebalance.gr?subject=%CE%94%CE%B9%CE%B1%CE%B3%CF%81%CE%B1%CF%86%CE%AE%20%CE%B1%CF%80%CF%8C%20%CF%84%CE%B7%20%CE%BB%CE%AF%CF%83%CF%84%CE%B1">info@homebalance.gr</a>
+
+  <p class="fine">Το αίτημά σου εκτελείται το αργότερο εντός ενός μήνα, όπως ορίζει το άρθρο 12 παρ. 3 του Γενικού Κανονισμού για την Προστασία Δεδομένων — στην πράξη, μέσα σε λίγες ώρες. Μετά τη διαγραφή διατηρείται μόνο η διεύθυνσή σου σε λίστα αποκλεισμού, ώστε να μη λάβεις ξανά email κατά λάθος· μπορείς να ζητήσεις και τη διαγραφή αυτής.</p>
+
+  <div class="actions">
+    <a class="btn" href="/">Επιστροφή στην αρχική</a>
+    <a class="btn ghost" href="/#privacy">Πολιτική Απορρήτου</a>
+  </div>
 </div>
-<script>
-(function(){
-  var params = new URLSearchParams(window.location.search);
-  var email = params.get('email') || '';
-  var token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiNjJiMzI1MjFlNTVhOTk3YTM5Yjk5YmVlZmNjYTAyMGY5NzE5ZjhiNTQ5NTk0NWM5Y2JhYTIwZWQ1MzVmZDg3M2UwZWNiOWExNTIzOWE5MjYiLCJpYXQiOjE3ODE5ODI4NzQuNTE4MTE2LCJuYmYiOjE3ODE5ODI4NzQuNTE4MTE5LCJleHAiOjQ5Mzc2NTY0NzQuNTE0MTU2LCJzdWIiOiIyNDEzMTg0Iiwic2NvcGVzIjpbXX0.dwqaQghsBYfykgK7cxH4ujOq79MJE6o_9BLup_J_xkyqceQwFIGKmMHJQ0Answr0Wh2KBzhM68WwgKU0Z0G2aUj3sUhVOpg8-Kfie2pMJA8Y-kN-c-e1fc5IDLbDw432H8xCoLigjr8YBcf2W4inEPKYIy1xYypCV4jsYHyVmCKSZ9mwavEYRsivufEvslvqf-DBNT3UXTSBA8k1FqOvKnAfafBYMhEhv83vxlPB-Eoa4QwDmCCbyQp8aleetjsxFJzvFeM4nWv_PMLAQYMYj5SyZqxY_ZdJZKRE_xRFY1F_yahDLvTbgnO2zYxvHRo0xw307T4x6rx0eSX0T6NGGyyUfdPo6g0DfajJQLcsJAbp8HdLd46IomDdL6dtvu3qM2i8Dokr3jl6z2aCkpNqgZC8qwSWPM8HmYZs4BWjaugGwI9ewCMis8tmHsSA3p5M3a5eCJuxBvDwccj0STyUhWHhHnAj4cYdKxRPnWrBProp_Ph7t2a7dUjwAb1eSZkMrW6AeekrUt23efmYBYMu4MNjkhoSD1Ck0MY9SIdnx8uCjz5830JCb8wHkObnIivzGItKGMNMjdLIsUaaHmryhlD0YiKCibehVgq6pOxzG8epTT0lVNhydCKjEe_0idXBZi-R2Zwy-T1bF6r8n0nP0qPV5V9YrTjbE_ohmCSFK2A';
-
-  function showDone(html){
-    document.getElementById('loading').style.display='none';
-    document.getElementById('done').style.display='block';
-    document.getElementById('done').innerHTML=html;
-  }
-
-  if(!email){
-    showDone('<h1>Κατάργηση εγγραφής</h1><p>Δεν βρέθηκε διεύθυνση email. Αν θέλεις να διαγραφείς, επικοινώνησε μαζί μας.</p><p><a class="btn" href="/">Επιστροφή στην αρχική</a></p>');
-    return;
-  }
-
-  fetch('https://connect.mailerlite.com/api/subscribers/'+encodeURIComponent(email),{
-    method:'DELETE',
-    headers:{
-      'Content-Type':'application/json',
-      'Authorization':'Bearer '+token
-    }
-  }).then(function(r){
-    if(r.status===204||r.status===200||r.status===404){
-      showDone('<h1 class="success">Η εγγραφή σου καταργήθηκε</h1><p>Διαγράφηκες επιτυχώς από τη λίστα. Δεν θα λαμβάνεις άλλα emails από το Home Balance.</p><p><a class="btn" href="/">Επιστροφή στην αρχική</a></p>');
-    } else {
-      showDone('<h1 class="error">Κάτι πήγε στραβά</h1><p>Δεν ήταν δυνατή η κατάργηση εγγραφής αυτή τη στιγμή. Δοκίμασε ξανά αργότερα.</p><p><a class="btn" href="/">Επιστροφή στην αρχική</a></p>');
-    }
-  }).catch(function(){
-    showDone('<h1 class="error">Σφάλμα σύνδεσης</h1><p>Δεν ήταν δυνατή η σύνδεση. Δοκίμασε ξανά αργότερα.</p><p><a class="btn" href="/">Επιστροφή στην αρχική</a></p>');
-  });
-})();
-</script>
 </body>
 </html>
